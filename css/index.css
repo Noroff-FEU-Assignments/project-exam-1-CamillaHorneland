@@ -4,7 +4,7 @@
 }
 
 .header1 { 
-    background: linear-gradient(to top, rgba(244, 237, 237, 75%), rgba(244, 237, 237, 75%)),url('/images/header.jpeg');
+    background: linear-gradient(rgba(244, 237, 237, 75%), rgba(244, 237, 237, 75%)),url('/images/header.jpeg');
     background-size: cover;
     background-repeat: repeat;
     height: 40vh;
@@ -13,51 +13,53 @@
 
 h1 {
     color: #A67665;
-    /* text-align: center; */
-    font-size: 85px;   
     position: absolute;
     transform: translate(-50%, -50%);
     left: 50%;
     top: 33%;
-    background-color: #F2F2F2;
+    background-color: #f2f2f284;
 }
 
-@media (max-width: 870px) {
-
-    h1 {
-        font-size: 70px;
-    }
+.welcome {
+    display: flex;
+    flex-direction: row;
 }
 
+.welcome_text,
+.welcome_image {
+    margin-left: 60px;
+    margin-right:60px;
+    flex: 1;
+}
+
+.welcome img {
+    max-width: 70%;
+    min-width: 40%;
+}
+
+.blog_carusel {
+    height: 300px;
+}
 
 @media (max-width: 800px) {
 
     .header1 {
-            background: linear-gradient(to top, rgba(244, 237, 237, 67%), rgba(244, 237, 237, 67%)), url('/images/snail-house-header.png');
-            background-position: center;
-            height: 35vh;
+        background: linear-gradient(rgba(244, 237, 237, 67%), rgba(244, 237, 237, 67%)), url('/images/snail-house-header.png');
+        background-position: center;
+        height: 30vh;
+        background-repeat: no-repeat;
+        margin: 0;
     } 
 
-    h1 {
-        font-size: 60px;
-        background-color: transparent;
-    }
-}
+    .welcome {
+        display: flex;
+        flex-direction: column-reverse;
+        justify-content: center;
+     }
 
-@media (max-width: 620px) {
-    h1 {
-        font-size: 50px;
-    }
-}
-
-@media (max-width: 510px) {
-    h1 {
-        font-size: 40px;
-    }
-}
-
-@media (max-width: 510px) {
-    h1 {
-        font-size: 30px;
+    .welcome_image {
+        justify-content: center;
+        display: flex;
+        margin-bottom: 50px;
     }
 }

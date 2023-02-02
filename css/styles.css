@@ -6,6 +6,11 @@ h2 {
     font-family: 'Dancing Script', sans-serif;
 }
 
+h3 {
+    font-family: 'Josefin Sans', sans-serif;
+    color: #262521;
+}
+
 p,
 a {
     font-family: 'Josefin Sans', sans-serif;
@@ -18,15 +23,33 @@ body {
     height: 100%;
 }
 
+h1 {
+    font-size: 85px;
+}
+
+h2 {
+    font-size: 40px;
+    padding: 30px;
+    color: #262521;
+    text-align: center;
+}
+
+h3 {
+    font-size: 20px;
+    font-weight: bold;
+    margin-left: 60px;
+    margin-top: 50px;
+}
+
 .menu {
     background-color:#EBDBD3;
     width: 100%;
-    height: 90px; 
+    height: 90px;
     border-top: 1px solid #707070;
     border-bottom: 1px solid #707070;
 }
 
-a {
+.menu a {
     text-decoration: none;
     font-size: 20px;
     font-weight: 600;
@@ -50,6 +73,63 @@ nav ul {
     display: none;
 }
 
+footer {
+    background-color: rgba(242, 193, 182, .44);
+    border-top: 1px solid #707070;
+    border-bottom: 1px solid #707070;
+    display: flex;
+    justify-content: center;
+    height: 100%;
+    text-align: center;
+}
+
+.footer_contact,
+.footer_sosial {
+    margin: 40px;
+}
+
+.copy {
+    margin:70px;
+}
+
+.sosial img {
+    height: 35px;
+    margin-left: 25px;
+}
+
+.sosial1,
+.sosial2,
+.sosial3,
+.sosial4 {
+    display:inline-flex;
+    cursor: pointer;
+}
+
+.footer_sosial {
+    display: flex; 
+    flex-direction: row;
+}
+
+.footer_contact a {
+    text-decoration: none;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.footer_contact {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.sosial_text p {
+    font-weight: bold;
+}
+
+.close {
+    display: none;
+}
+
 @media (max-width: 870px) {
 
     h1 {
@@ -60,22 +140,20 @@ nav ul {
 @media (max-width: 800px) {
 
     .deteskop,
-    #hamburger-menu,
-    .bars1 {
+    #hamburger-menu {
         display: none;
     }
 
    .bars {
-       display: inline;
-       padding-top: 20px;
+       display: inline-block;
+       padding-top: 80px;
        position: absolute;
        transform: translate(-50%, -50%);
        left: 50%;
-       top: 350px;
        cursor: pointer;
    }
 
-   a {
+   .menu a {
      margin: 0px;
      margin-top: 40px;
      position: absolute;
@@ -85,16 +163,22 @@ nav ul {
 
     #hamburger-menu:checked ~ nav {
         display: block;
-        background-color: #EBDBD3;
-        width: 100%;
-        height: 400px;
     }
 
-         #hamburger-menu:checked:after ~ .bars1 {
-             display: flex;
-            
-             height: 600px;
-         }
+    #overlay {
+        position: absolute;
+        display: none;
+        width: 100%;
+        height: 200%;
+        background-color: #EBDBD3;
+        z-index: 2;
+    }
+
+    .close {
+        display: block;
+        padding-top: 130px;
+        cursor: pointer; 
+    }
 
     #hamburger-menu:checked ~ nav li {
         display:flex;
@@ -108,11 +192,27 @@ nav ul {
         margin: 40px;
     }
 
-
     h1 {
         font-size: 60px;
         background-color: transparent;
     }
+
+    .footer_contact,
+    .footer_sosial,
+    .copy {
+       margin: 30px;
+    }
+
+    .footer_sosial {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 10px;
+    }
+
+    .sosial img {
+        margin-left: 0px;
+        margin: 20px;
+    }        
  }
     
  @media (max-width: 620px) {
@@ -126,12 +226,16 @@ nav ul {
             
     h1 {
         font-size: 40px;
+        
     }
  }
-    
- @media (max-width: 510px) {
-            
-    h1 {
-        font-size: 30px;
-    }
- }
+
+  @media (max-width: 410px) {
+
+      h1 {
+          font-size: 35px;
+
+      }
+  }
+ 
+
