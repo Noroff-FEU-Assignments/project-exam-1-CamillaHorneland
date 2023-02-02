@@ -1,5 +1,6 @@
 h1 {
    font-family: 'Pacifico', sans-serif;
+    color: #A67665;
 }
 
 h2 {
@@ -159,21 +160,22 @@ footer {
         display: none;
     }
 
-   .bars {
+   .bars,
+   .close {
        display: inline-block;
        padding-top: 80px;
        position: absolute;
        transform: translate(-50%, -50%);
-       left: 50%;
+       left: 51%;
        cursor: pointer;
    }
 
+   .close a {
+    margin: 15px;
+   }
+
    .menu a {
-     margin: 0px;
-     margin-top: 40px;
-     position: absolute;
-     transform: translate(-50%, -50%);
-     left: 50%;    
+     line-height: 0;
    }
 
     #hamburger-menu:checked ~ nav {
@@ -187,12 +189,6 @@ footer {
         height: 200%;
         background-color: #EBDBD3;
         z-index: 2;
-    }
-
-    .close {
-        display: block;
-        padding-top: 130px;
-        cursor: pointer; 
     }
 
     #hamburger-menu:checked ~ nav li {
@@ -209,7 +205,7 @@ footer {
 
     h1 {
         font-size: 60px;
-        background-color: transparent;
+       
     }
 
     .footer_contact,

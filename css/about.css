@@ -5,12 +5,11 @@ body {
     margin: 0;
 }
 
-h1 {
-    color: #A67665;
+/* h1 {
     font-size: 80px;
     margin: 70px;
     margin-left: 120px;
-}
+} */
 
 main {
     min-height: 800px;

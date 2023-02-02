@@ -30,6 +30,42 @@
     </header>
     </header>
     <main>
+        <h1>Contact..</h1>
+        <div class="contact_content">
+            <div class="contact_why">
+                <p>If you have any questions for the q&a or products you want to recommend
+                don’t hesitate to reach out.</p>
+            </div>
+            <div class="contact_image">
+                <img src="/images/image/snail-purple.jpeg" alt="Snail on purple flower" />
+            </div>
+        </div>
+        <form id="contactContainer">
+            <div class="form_flex">
+               <div class="form_part1">
+                    <div class="form1">
+                      <label>Name (required)<input name="yourName" id="yourName"></input></label>
+                      <div class="form-error" id="yourNameError">Please enter your first and last name. It must bee at least 5 character.</div>
+                   </div>
+                   <div class="form1">
+                      <label> Email (required)<input name="email" id="email"></input></label>
+                      <div class="form-error" id="emailError">Please enter a valid email address</div>
+                   </div>
+                   <div class="form1">
+                       <label>Subject (required. Minimum 15 characters)<input name="subject" id="subject"></input></label>
+                       <div class="form-error" id="subjectError">Please enter subject. It shoulde be more then 15 characters.</div>
+                  </div>
+             </div>
+             <div class="form_part2">
+                 <div class="form1">
+                    <label> Message (minimum 25 characters)<textarea name="message" id="message"></textarea></label>
+                    <div class="form-error" id="messageError">Your message must be at least 20 characters</div>
+                 </div>
+             </div>
+            </div>
+                <button class="btn green disabled">Submit</button>
+                <div id="messageYou"></div>
+        </form>
     </main>
     <footer>
         <div class="footer_content">
@@ -65,6 +101,7 @@
                 <p>Slime-Care &copy</p>
             </div>
     </footer>
+    <script type="text/javascript" src="js/contact.js"></script>
     </body>
     
     </html>
