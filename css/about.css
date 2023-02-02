@@ -1,0 +1,75 @@
+body {
+    background-image: url(/images/image/mucin.jpeg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin: 0;
+}
+
+h1 {
+    color: #A67665;
+    font-size: 80px;
+    margin: 70px;
+    margin-left: 120px;
+}
+
+main {
+    min-height: 800px;
+}
+
+.about_content {
+    display: flex;
+    flex-direction: row;
+}
+
+.about_btn {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    padding-top: 35px;
+}
+
+.about_info {
+    flex: 2;
+}
+
+.btn {
+    margin-bottom: 20px;
+   
+}
+
+.about_info,
+.about_btn {
+    margin-left: 60px;
+}
+
+footer {
+    display: flex;
+}
+
+@media (max-width: 800px) {
+
+    h1 {
+        font-size: 60px;
+        margin: 70px;
+        text-align: center;
+    }
+
+    body {
+        background-image: url(/images/image/mucin_mob.jpeg);
+    }
+
+    .about_content {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .about_info,
+    .about_btn {
+        margin: 30px;
+    }
+
+    .about_btn {
+        margin-bottom: 60px; 
+    }
+
+}
