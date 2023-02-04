@@ -17,25 +17,35 @@ h1 {
 }
 
 .contact_image img {
-    max-width: 70%;
-    min-width: 40%;
+    max-width: 80%;
+    min-width: 50%;
 }
 
 .form_flex {
     display: flex;
     flex-direction: row; 
+    margin-top: 60px;   
 }
 
-.form_part1,
-.form_part2 {
+.form_part {
+    width: 50%;
+}
+
+.form1 {
+    margin-bottom: 50px;
+}
+
+.form_part1 {
     margin-left: 60px;
     margin-right: 60px;
-    flex: 1;
+    width: auto;
+    text-align: end;
+    padding: 5px;
 }
 
-form {
-    max-width: 350px;
-    min-width: 250px;      
+.form_part2 {
+    width: 350px;
+    margin-left: 60px;
 }
 
 label {
@@ -48,31 +58,67 @@ input,
 textarea {
     background-color: #F8E4DF;
     border: 1px solid #707070;
-    margin-top: 20px;
-    margin-bottom: 20px;
+    margin-top: 5px;
+    margin-left: 5px;
+    margin-bottom: 5px;
     padding: 10px;
+    min-width: 250px;
+    max-width: 250px;
 }
 
 textarea {
-    width: 250px;
-    height: 320px;
+    height: 250px;
 }
 
 .form-error {
     display: none;
     color: rgb(186, 21, 21);
     font-size: 1rem;
-    margin-top: 2px;
+    margin-top: 0;
 }
-
-/* label {
-    margin-top: 1rem;
-} */
 
 .btn {
     display: block;
     margin-top: 40px;
     margin-bottom: 70px;
+}
+
+ #btn:checked~ .messageYou {
+    display: block;
+ }
+
+.messageYou {
+    background-color: #F2F2F2;
+    height: 400px;
+    width: 400px;
+    margin: 0 auto; 
+    transform: translate(-50%, -50%);
+    position: absolute;
+    left: 50%;
+    right: 50%;
+    top: 70%;
+}
+
+.messageYou h1 {
+    font-size: 30px;
+}
+
+.messageYou img {
+    margin-left: 180px;
+    margin-right: 180px;
+    margin-bottom: 20px;
+}
+
+.messageYou a {
+    
+    font-size: 20px;
+    font-weight: bolder;
+    text-decoration: none;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-around;
+   
+
 }
 
 @media (max-width: 800px) {
@@ -89,36 +135,33 @@ textarea {
         flex-direction: column-reverse;
         justify-content: center;
     }
-    
+
     .contact_image {
         justify-content: center;
         display: flex;
-        margin-bottom: 50px;
     }
 
     .form_flex {
-        display: flex; 
-        flex-direction: column;
-        justify-content: center;
+       display: flex;
+       flex-direction: column;
     }
 
-    .form1 {
-        justify-content: center;
+    .form_part {
+        width: 100%;
     }
-
-    label,
-    input {
-       align-content: center;
-    }
-
-    /* .form_part1,
-    .form_part2 {
-            margin-left: 60px;
-            margin-right: 60px;
-           justify-items: center;
-           align-content: center;
-    } */
-           
-
+   
+    .form_part1 {
+        width: 300px;
         
+    }
+
+    .form_part1,
+    .form_part2 {
+        margin: auto;
+        text-align: center;
+    }
+
+    .messageYou {
+        top: 110%;
+    }
 }

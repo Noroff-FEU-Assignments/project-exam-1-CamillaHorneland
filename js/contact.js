@@ -16,7 +16,7 @@ function validateForm(event) {
 
     var hasErrors = false;
 
-    if(checkLength(yourName.value, 6)===true) {
+    if(checkLength(yourName.value, 5)===true) {
         yourNameError.style.display = "none";
     } else {
         hasErrors = true;
@@ -30,14 +30,14 @@ function validateForm(event) {
         emailError.style.display = "block";
     }
 
-     if (checkLength(subject.value, 16) === true) {
+     if (checkLength(subject.value, 15) === true) {
         subjectError.style.display = "none";
     } else {
         hasErrors = true;
         subjectError.style.display = "block";
     }
 
-      if (checkLength(message.value, 26) === true) {
+      if (checkLength(message.value, 25) === true) {
         messageError.style.display = "none";
     } else {
         hasErrors = true;
@@ -45,7 +45,7 @@ function validateForm(event) {
     }
 
        if(!hasErrors) {
-       messageYou.innerHTML = '<div class="messageYou">Your message has been sent</div>';
+       messageYou.innerHTML = '<div class="messageYou"><h1>Your message has been sent..</h1><img src="/images/heart.png"><a href="index.html">Home</a></div>';
        form.reset();
     }
 
