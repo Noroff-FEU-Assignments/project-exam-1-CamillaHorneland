@@ -1,45 +1,52 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description"
-        content="About Slime-Care the blog.">
-    <title>Slime-Care|About</title>
+        content="Slime-Care the blog. All posts.Q&A, recommendations and learn the benefits of using snail slime.">
+    <title>Slime-Care|Blog</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Josefin+Sans&family=Merriweather:wght@900&family=Pacifico&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Josefin+Sans&family=Merriweather:wght@900&family=Pacifico&display=swap"
+        rel="stylesheet">
     <link rel="shortcut icon" type="image/png" href="images/favicon.png">
     <link href="/css/styles.css" rel="stylesheet" />
-    <link href="/css/about.css" rel="stylesheet" />
+    <link href="/css/blog.css" rel="stylesheet" />
 </head>
+
 <body>
     <header>
-    <section class="menu">
-        <label for="hamburger-menu"><img class="bars" src="/images/menu_mob.png" alt="icon for menu"></label>
-        <input type="checkbox" id="hamburger-menu">
-        <nav class="deteskop mobile" id="overlay">
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="blog.html">Blog</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="contact.html">Contact</a></li>
-                <a class="close" href="about.html"><img src="/images/menu_mob_close.png" alt="close menu" /></a>
-            </ul>
-        </nav>
-    </section>
+        <section class="menu">
+            <label for="hamburger-menu"><img class="bars" src="/images/menu_mob.png" alt="icon for menu"></label>
+            <input type="checkbox" id="hamburger-menu">
+            <nav class="deteskop mobile" id="overlay">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <a class="close" href="blog.html"><img src="/images/menu_mob_close.png" alt="close menu" /></a>
+                </ul>
+            </nav>
+        </section>
     </header>
     <main>
-        <h1>About..</h1>
-        <div class="about_content">
-            <div class="about_info">
-           </div>
-           <div class="about_btn">
-              <a href="contact.html" class="btn" title="Contact">Contact</a>
-              <a href="blog.html" class="btn" title="Blog">Blog</a>
-              <a href="index.html" class="btn" title="Home">Home</a>
-           </div>
-        </div>
+        <section class="blog_header">
+            <img src="/images/heart.png">
+            <h1 class="nameCategory"></h1>
+            <img src="/images/heart.png">
+        </section>
+        <section class="categorys">
+            <a href="blog.html" class="btn2" title="All posts">All</a>
+            <a href="category.html" class="btn2" title="product posts">Products</a>
+            <a href="category.html" class="btn2" title="q&a posts">Q&A</a>
+            <a href="category.html" class="btn2" title="facts posts">Facts</a>
+            <a href="category.html" class="btn2" title="other posts">Other</a>
+        </section>
+        <div class="postsCategory"></div>
     </main>
     <footer>
         <div class="footer_content">
@@ -75,7 +82,8 @@
                 <p>Slime-Care &copy</p>
             </div>
     </footer>
-    <script src="js/about.js"></script>
+    <script src="js/posts.js"></script>
     <script src="js/message.js"></script>
 </body>
+
 </html>

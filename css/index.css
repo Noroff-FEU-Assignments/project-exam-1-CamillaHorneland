@@ -24,7 +24,7 @@ h1 {
     flex-direction: row;
 }
 
-.welcome_text,
+.welcomeContainer,
 .welcome_image {
     margin-left: 60px;
     margin-right:60px;

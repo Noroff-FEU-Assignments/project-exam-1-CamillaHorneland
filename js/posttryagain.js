@@ -21,7 +21,11 @@ async function getPosts () {
        
 
         for(let i = 0; i <result.length; i++) {
-           
+         
+            number = result.length;
+            getPosts(10);
+
+            function onclick => getPosts(11++);
             
         postsContainer.innerHTML +=
          `<div class="blog">
@@ -49,3 +53,25 @@ postsContainer.innerHTML = message("error", error);
 
 getPosts();
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        //  for(let i = 0; i <result.length; i++) 
+
+        //     for (let i = 10; i <20; i++) 
+
+  
