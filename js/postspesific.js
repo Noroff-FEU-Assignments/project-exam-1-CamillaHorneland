@@ -1,5 +1,8 @@
 const postspesificContainer = document.querySelector(".postSpesific");
 const title = document.querySelector("title");
+const modalImage = document.getElementById("modalImage");
+const modalsContainer = document.querySelector(".modal");
+const imageContainer = document.querySelector(".blogImage");
 
 const queryString = document.location.search;
 const params = new URLSearchParams(queryString);
@@ -25,15 +28,20 @@ const fetchPost = async() => {
               
           `<div class="post">
               <div class="name"><h2>${result["title"]["rendered"]}</h2></div>
-              <div class="date"><p>${result["date"]}</p></div>
-              <div class="getCatogory">${result["_embedded"]["wp:term"][0][0]["name"]}</div>
-              <div class="mainContent"><p>${result["content"]["rendered"]}</p></div>
+              <div class="getCatogory btn2">${result["_embedded"]["wp:term"][0][0]["name"]}</div>
+                <div id="modalImage"class="blogImage"><img src='${result["_embedded"]["wp:featuredmedia"][0]["source_url"]}'</><a class="modal"></a></div>
+                <div class="text"><p>${result["content"]["rendered"]}</p></div>
+                <div class="date"><p>${result["date"]}</p></div>
+              </div>
           </div>`;
-                
-        //  ${result[i]._embedded["wp:featuredmedia"][0]["sizes:full"]["source_url"]}
-    }
-    
-catch (error) {
+          document.title += `${result["title"]["rendered"]}`;
+
+        //  imageContainer.onclick = function (){
+        // modalsContainer.innerHTML += `${result["_embedded"]["wp:featuredmedia"][0]["source_url"]}`;
+        // console.log("clicked")
+        //  }
+         
+}catch (error) {
       console.log(error);
       postspesificContainer.innerHTML = message("error", error);
    }

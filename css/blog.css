@@ -25,29 +25,15 @@ h2 {
 .categorys {
     display: flex;
     margin-left: 10%;
-    margin-right: 10%;
-   
-}
-
-.btn2 {
-    padding: 2px 6px;
-    border-radius: 2px;
-    flex-direction: column;
-    text-align: center;
-    width: 80px;
-    margin: 0 auto;
-    text-decoration: none;
-    background-color: #F2C1B6;
-    border: 1px solid #707070;
-    cursor: pointer;
-    font-size: 14px;
+    margin-right: 10%;  
 }
 
 .blogimage img {
     min-height: 250px;
     max-height: 300px;
     margin-right: 30px;
-   
+    max-width: 400px;
+    min-width: 150px;
 }
 
 .posts {
@@ -70,21 +56,26 @@ h2 {
 
 
 .blogimage {
-    margin-left: 60px;
-    margin-top: 30px;
-    
+    margin-left: 100px;
+    margin-top: 30px;  
 }
 
 
 .blogtext {
-    margin-left: 20px;
-    margin-right: 60px;
-   
+    margin-right: 100px;   
 }
 
 a {
     text-decoration: none;
     font-weight: bold;
+}
+
+.displayPosts {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 50px;
+    cursor: pointer;
 }
 
  @media (max-width: 800px) {
@@ -96,6 +87,7 @@ a {
 
     .blogimage {
         margin-left: 0px;
+        margin-bottom: 30px;
     }
 
     .blogimage img {
@@ -103,6 +95,11 @@ a {
         justify-content: center;
         display: flex;
         min-height: 150px;
+    }
+
+    .blogtext {
+        margin-left: 30px;
+        margin-right: 30px;
     }
  }
 
