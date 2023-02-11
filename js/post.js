@@ -27,7 +27,7 @@ async function getPosts (url) {
          postsContainer.innerHTML +=
          `<div class="blog">
              <div class="blogcontent">
-                 <div class="blogimage"><img src='${result[i]["_embedded"]["wp:featuredmedia"][0]["source_url"]}'/></div>
+                 <div class="blogimage"><img src='${result[i]["_embedded"]["wp:featuredmedia"][0]["source_url"]}'alt='${result[i]["_embedded"]["wp:featuredmedia"][0]["alt_text"]}'/>/></div>
                  <div class="blogtext">
                  <h2 class="blogname">${result[i].title.rendered}</h2>
                  <p>${result[i].excerpt.rendered}</p>

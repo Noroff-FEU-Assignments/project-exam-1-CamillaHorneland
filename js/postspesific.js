@@ -25,7 +25,9 @@ const fetchPost = async() => {
           `<div class="post">
               <div class="name"><h2>${result["title"]["rendered"]}</h2></div>
               <div class="getCatogory btn2">${result["_embedded"]["wp:term"][0][0]["name"]}</div>
-                <div id="modalImage"><img src='${result["_embedded"]["wp:featuredmedia"][0]["source_url"]}'</></div>
+                <div id="modalImage">
+                     <img src='${result["_embedded"]["wp:featuredmedia"][0]["source_url"]}'alt='${result["_embedded"]["wp:featuredmedia"][0]["alt_text"]}'/>
+                </div>
                 <div class="text"><p>${result["content"]["rendered"]}</p></div>
                 <div class="date"><p>${result["date"]}</p></div>
               </div>
@@ -34,14 +36,15 @@ const fetchPost = async() => {
        
           modalImage.onclick = function () {
             modalsContainer.innerHTML = "";
-            modalsContainer.innerHTML += 
+            modalsContainer.innerHTML = 
             `<div class="bigImage"> 
                 <img src='${result["_embedded"]["wp:featuredmedia"][0]["source_url"]}'</>
             </div>`;
             modalsContainer.style.display = "flex";
           }
+
          
-          window.onclick = function(event) {
+            window.onclick = function(event) {
         if (event.target == modalsContainer) {
           modalsContainer.style.display = "none";
         }}
@@ -52,6 +55,6 @@ const fetchPost = async() => {
       postspesificContainer.innerHTML = message("error", error);
    }
 
-}
+};
 
 fetchPost();
