@@ -36,9 +36,101 @@ h1 {
     min-width: 40%;
 }
 
-.blog_carusel {
-    height: 300px;
+.image img{
+    width: 130px;
+    height: 130px;
+    margin-top: 30px;
+    justify-content: center;
 }
+
+.carusel {
+  width: 70%;
+  height: 100%;
+ 
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #707070;
+  background-color: #f2c1b62e;
+  align-items: center;
+ 
+}
+
+.caruselFlex {
+    display: flex;
+    flex-direction: row;
+}
+
+.caruselContainer,
+.caruselContainer2 {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 50% 50%;
+    column-gap: 50px;
+    row-gap: 80px;
+    scroll-behavior: smooth;
+    margin-bottom: 80px;
+}
+
+.carusel p {
+    font-weight: lighter;
+    color: #707070;
+    margin: 15px;
+}
+
+.caruselChange {
+    /* position: absolute; */
+    display: flex;
+    /* position: relative; */
+    /* top: 30;
+    bottom: 150; */
+    /* margin: auto; */
+    /* top:30%; */
+    flex: 0.5;
+    cursor: pointer;
+    opacity: 0.5;
+    transition: opacity 100ms;
+}
+
+.caruselChange  {
+    margin-top: 400px;
+    margin: 20px;
+    border: none;
+}
+
+h5 {
+    font-family: 'Pacifico';
+    font-size: 35px;
+}
+
+.go_post p {
+    margin: 0;
+}
+
+.caruselChange:hover,
+.caruselChange:focus {
+    opacity: 1;
+}
+
+#caruselPrev {
+    justify-content: left;
+    margin-top: 430px;
+    margin-left: 20px auto; 
+}
+
+#caruselNext {   
+  justify-content: right;
+  margin-top: 430px;
+  margin-right: 20px auto;
+}
+
+.caruselMobil {
+    display: none;
+}
+
+footer {
+  margin-top: 60px !important;
+}
+
 
 @media (max-width: 800px) {
 
@@ -61,4 +153,49 @@ h1 {
         display: flex;
         margin-bottom: 50px;
     }
+}
+
+@media (max-width: 700px) {
+
+.caruselContainer {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 0px;
+}
+
+.carusel {
+    width: 70%;
+    display: flex;
+    align-self: center;
+    margin: 0 auto;
+}
+
+.caruselFlex {
+    margin: 40px;
+}
+
+#caruselPrev,
+#caruselNext {
+    display: none;
+}
+
+.caruselMobil {
+    display: flex;
+    opacity: 0.5;
+    transition: opacity 100ms;
+   
+}
+
+.caruselMobil h4 {
+    display: flex;
+    margin-right: 40%;
+    margin-left: 40%;
+    cursor: pointer;
+    line-height: 2;
+}
+
+.caruselMobil:hover,
+.caruselMobil:focus {
+    opacity: 1;
+}
 }

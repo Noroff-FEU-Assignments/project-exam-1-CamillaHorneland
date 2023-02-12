@@ -2,11 +2,11 @@
     display: none;
 }
 
-.post img {
-    width: 250px;
+.imageNormal img {
+    max-width: 40%;
     margin-left: 50px;
     cursor: pointer;
-    transition: 0.4s;
+    display: flex;
 }
 
 .text {
@@ -22,12 +22,35 @@
     margin-bottom: 80px;
 }
 
+.post li {
+   font-family: 'Josefin Sans';
+    line-height: 3;
+}
+
 .date p {
     font-style: oblique;
 }
 
-/* .btn2 {
-    margin: 0;
-    margin-right: 30px;
+.btn2 {
+    margin-bottom: 50px;   
+}
+
+@media (max-width: 800px) {
+
+    .post img {
+        margin: 0px auto;
+        justify-content: center;
+        display: flex;
+        min-height: 150px;
+        margin-bottom: 50px;
+     }
     
-} */
+     .text img {
+        display: none;
+     }
+
+     .post li {
+        line-height: 0;
+        display: inline-block;
+     }
+}

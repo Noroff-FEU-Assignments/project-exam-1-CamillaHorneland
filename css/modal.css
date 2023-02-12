@@ -2,16 +2,73 @@
     display: none;
     width: 500px;
     position: absolute;
-    transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%); 
     left: 50%;
     right: 50%;
-    top: 48%;  
+    align-items: center;
+    top: 50%;  
     z-index: 1;
 }
 
-.bigImage img {
-    max-width: 500px;
-    min-width: 350px;
-    max-height: 500px;
-    min-height: 350px;
+.closeModal {
+    position: absolute;
+    display: block;
+    transform: translate(-50%, -50%);
+    left: 100%;
+    right: 50%;
+    top: 10%;
+    z-index: 1;
+    font-family: 'Pacifico';
+    font-size: 70px;
+}
+
+.modal img {
+    max-width: 120%;
+    min-width: 300px;
+    margin-top: 180px;
+    border: 2px solid #707070;
+    left: 50%;
+        right: 50%;
 } 
+
+@media (max-width: 800px) {
+
+    .bigImage img {
+        width: 110%;
+    }
+
+    .closeModal {
+        left: 97%;
+    }
+}
+
+@media (max-width: 700px) {
+
+    .bigImage img {
+       width: 100%;
+     }
+
+    .closeModal {    
+        left: 87%;
+    }
+}        
+
+
+@media (max-width: 560px) {
+
+    .bigImage img {
+        width: 80%;
+        align-items: center;
+    }
+
+    .modal {
+        left: 60%;
+        right: 60%;
+    }
+
+    .closeModal {
+       left:68%;
+       font-size: 60px;
+    }
+}
+
