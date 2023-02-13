@@ -5,7 +5,8 @@ const categoryPost = document.querySelector(".category");
 const imageNormalPost = document.querySelector(".imageNormal");
 const textPostContainer = document.querySelector(".text");
 const datePost = document.querySelector(".date");
-const modalsContainer = document.querySelector(".modal");
+const modalsContainer = document.getElementById("modal");
+const backgroundBlur = document.getElementById("blur");
 
 const queryString = document.location.search;
 const params = new URLSearchParams(queryString);
@@ -48,22 +49,17 @@ const fetchPost = async() => {
           `<p>${textPost}</p>`;
 
           datePost.innerHTML += 
-          `<p>${date}</p>`;
-
-    // <div id="modalImage"><img src='${imagePost}'alt='${altText}'/></div>
-              
+          `<p>${date}</p>`;           
        
           imageNormalPost.onclick = function () {
             modalsContainer.innerHTML = 
-            `<img src='${imagePost}'alt='${altText}'/>`;
+            `<div><img src='${imagePost}'alt='${altText}'/></div>`;
             modalsContainer.style.display = "flex";
-           
           }
          
            window.onclick = function(event) {
         if (event.target == modalsContainer ) {
           modalsContainer.style.display = "none";
-          
         }
     };
 
