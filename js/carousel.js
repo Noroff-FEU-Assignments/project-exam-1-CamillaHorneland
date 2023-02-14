@@ -1,14 +1,8 @@
-const caruselContainer = document.querySelector(".caruselContainer");
-const caruselFlexContainer = document.querySelector(".caruselFlex");
 const caruselPrev = document.getElementById("caruselPrev");
 const caruselNext = document.getElementById("caruselNext");
 const caruselChangeContainer = document.querySelector(".caruselChange");
-const caruselMobil = document.querySelector(".caruselMobil");
-const caruselContainer2 = document.querySelector(".caruselContainer2");
-const slideContainer = document.querySelector(".slideContainer");
-const slides = document.querySelectorAll("carousel_holder");
 const carouselContainer = document.getElementById('carousel_container');
-const baseurl = "https://camillahorneland.no/slime-care/wp-json/wp/v2/posts?_embed&per_page=8";
+const baseurl = "https://camillahorneland.no/slime-care/wp-json/wp/v2/posts?_embed&per_page=6";
 let slidesLength = 0;
 let maxSlide = 0;
 
@@ -69,15 +63,16 @@ let curSlide = 0;
 
         caruselPrev.addEventListener("click", function () {
         
-            if (curSlide === 0) {
-                  curSlide = maxSlide;
-            } else{
-                 curSlide--;
+        if (curSlide === 0) {
+            curSlide = maxSlide;
+        } else {
+            curSlide--;
         }
         carouselContainer.style.left = "-"+(curSlide*100)+"%";
-        
         });
-
+// slides.forEach((slide, indx) => {
+//   slide.style.transform = `translateX(${indx * 100}%)`;
+// });
  
 
  

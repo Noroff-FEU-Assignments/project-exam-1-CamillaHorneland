@@ -19,6 +19,12 @@ h1 {
     background-color: #f2f2f284;
 }
 
+.search {  
+   display: inline-flex;
+   margin-right: 150px;
+   
+}
+
 .welcome {
     display: flex;
     flex-direction: row;
@@ -31,21 +37,24 @@ h1 {
     flex: 1;
 }
 
+h3 {
+    margin-bottom: 50px;
+} 
 .welcome img {
     max-width: 70%;
     min-width: 40%;
 }
 
 .image img{
-    width: 130px;
-    height: 130px;
+    max-width: 200px;
+    max-height: 150px;
     margin-top: 30px;
     justify-content: center;
 }
 
 .carusel {
-  width: 40%;
-  height: 120%;
+  width: 35%;
+  height: 100%;
   display: flex;
   flex-direction: column;
   border: 1px solid #707070;
@@ -53,36 +62,19 @@ h1 {
   align-items: center;
 }
 
-.caruselFlex {
-    position: relative;
-    display: flex;
-    flex-direction: column;
-}
-
-.caruselContainer,
-.carousel_holder,
-.caruselContainer2 {
+.carousel_holder {
     display: flex;
     flex-direction: row;
-    justify-content: space-evenly;
-    position: absolute;
-   
-}
-
-.carousel_holder {
+    justify-content: space-evenly; 
     width: 100vw;
     position: relative;
 }
 
-.slideContainer {
-    width: 100%;
-    position: relative;
-    transition: all 0.5s;
-}
-
 #blog_post_carousel {
     position: relative;
-    min-height: 600px;;
+    min-height: 620px;
+    overflow: hidden;
+    width: 100vw;
 }
 
 #carousel_container {
@@ -121,12 +113,6 @@ h1 {
     color: #262521;
 }
 
-h5 {
-    font-family: 'Pacifico';
-    font-size: 35px;
-    margin: 0;
-}
-
 .go_post p {
     margin-bottom: 10px;
 }
@@ -146,16 +132,6 @@ h5 {
     right: 0;
     width:fit-content;
     height: 90px;
-}
-
-.slideContainer {
-    height: 100%;
-    /* overflow: scroll;
-    scroll-behavior: smooth; */
-}
-
-.caruselMobil {
-    display: none;
 }
 
 footer {
@@ -184,49 +160,27 @@ footer {
         display: flex;
         margin-bottom: 50px;
     }
+
+     #blog_post_carousel {
+            position: relative;
+            min-height: 700px;
+    }
 }
 
-@media (max-width: 700px) {
+@media (max-width: 600px) {
 
-.caruselContainer {
-    display: flex;
-    flex-direction: column;
-    margin-bottom: 0px;
-}
+    .carousel_holder {
+        display: flex;
+        flex-direction: column;
+        align-items: center;  
+        gap: 30px;
+    }
 
-.carusel {
-    width: 70%;
-    display: flex;
-    align-self: center;
-    margin: 0 auto;
-}
+    .carusel {
+        width: 50%; 
+    }
 
-.caruselFlex {
-    margin: 40px;
-}
-
-#caruselPrev,
-#caruselNext {
-    display: none;
-}
-
-.caruselMobil {
-    display: flex;
-    opacity: 0.5;
-    transition: opacity 100ms;
-   
-}
-
-.caruselMobil h4 {
-    display: flex;
-    margin-right: 40%;
-    margin-left: 40%;
-    cursor: pointer;
-    line-height: 2;
-}
-
-.caruselMobil:hover,
-.caruselMobil:focus {
-    opacity: 1;
-}
+    #blog_post_carousel {
+      min-height: 1280px;
+    }
 }
