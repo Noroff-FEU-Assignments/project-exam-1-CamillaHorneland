@@ -1,35 +1,39 @@
+#blur {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1040;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.4);
+    transition: 0.5px;
+    backdrop-filter: blur(15px);
+    display: none;
+}
+
 #modal {  
     display: none;
     width: 450px;
-    position: absolute;
-    transform: translate(-50%, -50%); 
-    left: 45%;
-    right: 45%;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     align-items: center;
     top: 50%;  
+    z-index: 1050;
 }
 
 #modal img {
-    max-width: 120%;
-    min-width: 300px;
-    
+    min-width: 500px;
+    max-width: 600px;
     border: 2px solid #707070;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    align-items: center;
+    top: 50%;
 }
-
-/* #modal.active {
-    opacity: 1;
-    transition: 0.5s;
-}
-
-.background#blur.active {
-    filter: blur(20px);
-    max-width: 800px;
-    width: 100vw;
-    min-height: 100vh;
-    background: rgba(214, 206, 206, 0.234); 
-    transition: 0.5px;
-    opacity: 0.5;
-} */
 
 
 @media (max-width: 800px) {
@@ -39,23 +43,27 @@
     }
 }
 
-@media (max-width: 700px) {
+/* @media (max-width: 700px) {
 
     #modal img {
-       width: 80%;
+        min-width: 400px;
+        max-width: 500px;
      }
-}        
+}         */
 
 
-@media (max-width: 560px) {
+@media (max-width: 580px) {
 
     #modal img {
-        width: 70%;
-    }
-
-    #modal {
-        left: 60%;
-        right: 60%;
+        min-width: 400px;
+        max-width: 500px;
     }
 }
 
+@media (max-width: 440px) {
+
+    #modal img {
+        min-width: 250px;
+        max-width: 300px;
+    }
+}

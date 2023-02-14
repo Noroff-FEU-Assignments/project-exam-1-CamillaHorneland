@@ -1,14 +1,18 @@
 const caruselContainer = document.querySelector(".caruselContainer");
-const caruselWrapperContainer = document.querySelector(".caruselWrapper");
+const caruselFlexContainer = document.querySelector(".caruselFlex");
 const caruselPrev = document.getElementById("caruselPrev");
 const caruselNext = document.getElementById("caruselNext");
 const caruselChangeContainer = document.querySelector(".caruselChange");
 const caruselMobil = document.querySelector(".caruselMobil");
 const caruselContainer2 = document.querySelector(".caruselContainer2");
-
+const slideContainer = document.querySelector(".slideContainer");
+const slides = document.querySelectorAll("carousel_holder");
+const carouselContainer = document.getElementById('carousel_container');
 const baseurl = "https://camillahorneland.no/slime-care/wp-json/wp/v2/posts?_embed&per_page=8";
+let slidesLength = 0;
+let maxSlide = 0;
 
-async function getCarusel () {
+async function getCarusel() {
     try {
         const response = await fetch(baseurl);
         
@@ -16,78 +20,73 @@ async function getCarusel () {
 
         console.log(result);
         console.log(url);
-       
-         for(let i = 0; i < result.length; i++) {
-
-        let namePost = result[i].title.rendered;
-        let imagePost = result[i]._embedded["wp:featuredmedia"][0].source_url;
-        let textPost = result[i].excerpt.rendered;
-
         
-            if(i===0 || i === 1 || i === 2 || i === 3) {
-               caruselContainer.innerHTML +=
-                `<div class="carusel">
-                 <div class="image"><img src='${imagePost}'alt='${result[i]["_embedded"]["wp:featuredmedia"][0]["alt_text"]}'/></div>
-                 <h4>${namePost}</h4>
-                 <p>${textPost}</p>
-                 <div class="go_post">
-                     <a href="blogspesific.html?id=${result[i].id}"><p>Read more >>></p></a>
-                 </div> 
-          </div>`;
+        
+        const totalPosts = result.length;
+        const carouselWidth = Math.ceil(totalPosts / 2)*100;
+        carouselContainer.style.width = carouselWidth + "%";
 
-
-            } if(i===4 || i === 5 || i === 6 || i === 7) {   
-                caruselContainer2.innerHTML +=
-                 `<div class="carusel">
-                 <div class="image"><img src='${imagePost}'alt='${result[i]["_embedded"]["wp:featuredmedia"][0]["alt_text"]}'/></div>
-                 <h4>${namePost}</h4>
-                 <p>${textPost}</p>
-                 <div class="go_post">
-                     <a href="blogspesific.html?id=${result[i].id}"><p>Read more >>></p></a>
-                 </div> 
-          </div>`;
+        for(let i = 0; i < totalPosts; i++) {
+            let namePost = result[i].title.rendered;
+            let imagePost = result[i]._embedded["wp:featuredmedia"][0].source_url;
+            let textPost = result[i].excerpt.rendered;
+            if((i % 2) == 0) {
+                carouselContainer.innerHTML += `<div class="carousel_holder" id="holder-${i}"></div>`;
+                slidesLength++;
+                maxSlide = slidesLength-1;
+            }
             
-      }
-
-      if (i === 3) {
-        break;
-      }
+            var carouselHolder = carouselContainer.lastChild;
+            carouselHolder.innerHTML += `<div class="carusel">
+                <div class="image"><img src='${imagePost}'alt='${result[i]["_embedded"]["wp:featuredmedia"][0]["alt_text"]}'/></div>
+                <h4>${namePost}</h4>
+                <p>${textPost}</p>
+                <div class="go_post">
+                    <a href="blogspesific.html?id=${result[i].id}"><p>Read more >>></p></a>
+                </div> 
+            </div>`;
+         }
+         
+    } catch(error) {
+        console.log(error);
     }
-
-
-}catch (error) {
-console.log(error);
- }
-
-
-};  
-
+}
 
 getCarusel();
 
+let curSlide = 0;
 
-caruselNext.addEventListener("click", () => {
-    const slideWith = caruselContainer.clientWidth;
-    caruselContainer.scrollLeft +=slideWith;
- });
+        caruselNext.addEventListener("click", function () {
+            
 
+            if(curSlide != maxSlide)
+                curSlide++;
+            else
+                curSlide = 0;
+
+            carouselContainer.style.left = "-"+(curSlide*100)+"%";
+        });
+
+        caruselPrev.addEventListener("click", function () {
+        
+            if (curSlide === 0) {
+                  curSlide = maxSlide;
+            } else{
+                 curSlide--;
+        }
+        carouselContainer.style.left = "-"+(curSlide*100)+"%";
+        
+        });
+
+ 
+
+ 
 
 
  
-// caruselPrev.addEventListener("click", () => {
-//     const slideWith = caruselContainer2.clientWidth;
-//     caruselContainer2.scrollLeft -=slideWith;
-// });  
+ 
 
-        //        caruselContainer2.innerHTML +=
-        //  `<div class="carusel">
-        //          <h4 class="blogname">${result[i].title.rendered}</h4>
-        //          <div class="image"><img src='${result[i]["_embedded"]["wp:featuredmedia"][0]["source_url"]}'alt='${result[i]["_embedded"]["wp:featuredmedia"][0]["alt_text"]}'/></div>
-        //           <p>${result[i].excerpt.rendered}</p>
-        //          <div class="go_post">
-        //              <a href="blogspesific.html?id=${result[i].id}"><p>Read more >>></p></a>
-        //          </div>
-        //   </div>`;
+     
     
 
 

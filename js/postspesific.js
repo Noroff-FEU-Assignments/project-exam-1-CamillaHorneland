@@ -16,7 +16,7 @@ const url = "https://camillahorneland.no/slime-care/wp-json/wp/v2/posts/" + id +
 
 console.log(id);
 console.log(url);
-
+var modalOpen = false;
 const fetchPost = async() => {
     try {
         const response = await fetch(url);
@@ -43,26 +43,31 @@ const fetchPost = async() => {
           `<div class="btn2">${catPost}</div>`;
 
           imageNormalPost.innerHTML += 
-          `<img src='${imagePost}'alt='${altText}'/>`;
+          `<img class="modal-img" src='${imagePost}'alt='${altText}'/>`;
 
           textPostContainer.innerHTML += 
           `<p>${textPost}</p>`;
 
           datePost.innerHTML += 
           `<p>${date}</p>`;           
-       
-          imageNormalPost.onclick = function () {
+          
+          imageNormalPost.addEventListener('click', function(){
             modalsContainer.innerHTML = 
-            `<div><img src='${imagePost}'alt='${altText}'/></div>`;
-            modalsContainer.style.display = "flex";
-          }
-         
-           window.onclick = function(event) {
-        if (event.target == modalsContainer ) {
-          modalsContainer.style.display = "none";
-        }
-    };
-
+            `<img class="modal-image" src='${imagePost}'alt='${altText}'/>`;
+            modalsContainer.style.display = "block";
+            backgroundBlur.style.display = "block";
+            modalOpen = true;
+          });
+       
+          window.addEventListener('click', function(e) {
+            if(modalOpen) {
+                if(e.target.className != "modal-image" && e.target.id != "modal" && e.target.className != "modal-img") {
+                  modalsContainer.style.display = "none";
+                  backgroundBlur.style.display = "none";
+                  modalOpen = false;
+              }
+            }
+          });
          
     }catch (error) {
       console.log(error);

@@ -3,8 +3,12 @@
 }
 
 .imageNormal img {
-    max-width: 40%;
+    max-width: 400px;
+    min-width: 250px;
+    max-height: 400px;
+    min-height: 250px;
     margin-left: 50px;
+    margin-bottom: 50px;
     cursor: pointer;
     display: flex;
 }
@@ -35,14 +39,21 @@
     margin-bottom: 50px;   
 }
 
+.btn {
+    display: flex;
+    margin-bottom: 60px;
+}
+
 @media (max-width: 800px) {
 
-    .post img {
+    .imageNormal img {
         margin: 0px auto;
         justify-content: center;
         display: flex;
-        min-height: 150px;
         margin-bottom: 50px;
+        max-width: 300px;
+        min-width: 250px;
+
      }
     
      .text img {
@@ -53,4 +64,11 @@
         line-height: 0;
         display: inline-block;
      }
+}
+
+@media (max-width: 500px) {
+
+    .imageNormal img {
+       max-width: 200px;
+    }
 }
