@@ -21,8 +21,11 @@ h1 {
 
 .search {  
    display: inline-flex;
-   margin-right: 150px;
-   
+   gap: 15px;
+   position: absolute;  
+   right:0;
+   margin-top: 30px;
+   margin-right: 30px;
 }
 
 .welcome {
@@ -159,6 +162,19 @@ footer {
         justify-content: center;
         display: flex;
         margin-bottom: 50px;
+    }
+
+    .search {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            position: relative;
+            margin-top: 200px;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            align-items: center;
+            
     }
 
      #blog_post_carousel {

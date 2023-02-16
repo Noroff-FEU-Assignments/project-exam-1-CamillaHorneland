@@ -1,15 +1,14 @@
-const postsContainer = document.querySelector(".posts");
-const postmoreContainer = document.querySelector(".postmore");
-const displayPosts = document.querySelector(".displayPosts");
+const postsFromCategories = document.querySelector(".postsCategories");
+const categoriesContainer = document.querySelector(".categories");
+
+// const queryString = document.location.search;
+// const params = new URLSearchParams(queryString);
+// const id = params.get("id");
+
+const url = "https://camillahorneland.no/slime-care/wp-json/wp/v2/categories/";
 
 
-
-const urlBase = "https://camillahorneland.no/slime-care/wp-json/wp/v2/posts";
-const urlFirst = `${urlBase}?_embed&per_page=10`;
-const urlRest = `${urlBase}?_embed&per_page=100`;
-
-
-async function getPosts (url) {
+async function getPostsCategories () {
     try {
         const response = await fetch(url);
         
@@ -18,13 +17,13 @@ async function getPosts (url) {
         console.log(result);
         console.log(url);
 
-         postsContainer.innerHTML = "";
+         postsFromCategories.innerHTML = "";
 
          for(let i = 0; i < result.length; i++) {
 
-          
+        document.title += `${["_embedded"]["wp:term"][0][0]["name"]}`;
       
-         postsContainer.innerHTML +=
+         postsFromCategories.innerHTML +=
          `<div class="blog">
              <div class="blogcontent">
                  <div class="blogimage"><img src='${result[i]["_embedded"]["wp:featuredmedia"][0]["source_url"]}'alt='${result[i]["_embedded"]["wp:featuredmedia"][0]["alt_text"]}'/></div>
@@ -44,22 +43,7 @@ console.log(error);
 
 }
 
-getPosts(urlFirst)
-
-
-displayPosts.addEventListener("click", () => {  
-    getPosts(urlRest);
-});
-
-displayPosts.addEventListener("click", () => {  
-    displayPosts.style.display ="none";
-});
-
-
-
-
-
-
+getPostsCategories()
 
 
 
