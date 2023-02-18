@@ -40,7 +40,7 @@ const fetchPost = async() => {
           `<h2>${namePost}</h2>`;
 
           categoryPost.innerHTML += 
-          `<div class="btn2"><a href="categories.html">${catPost}</a></div>`;
+          `<p>${catPost}</p>`;
 
           imageNormalPost.innerHTML += 
           `<img class="modal-img" src='${imagePost}'alt='${altText}'/>`;

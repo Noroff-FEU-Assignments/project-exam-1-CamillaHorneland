@@ -35,14 +35,14 @@
             <img src="/images/heart.png">
         </section>
         <section class="categories">
-                    `<a href="categories.html" class="btn2" title="All posts">All</a>
-                    <a href="categories.html?id=5" class="btn2" title="product posts">Products</a>
-                    <a href="categories.html?id=3" class="btn2" title="q&a posts">Q&A</a>
-                    <a href="categories.html?id=4" class="btn2" title="other posts">Other</a>`;
+            <div class="category1 btn2"><a href="categories.html?category=all" title="All posts">All</a></div>
+            <div class="category2 btn2"><a href="categories.html?category=product" title="products posts">Products</a></div>
+            <div class="category3 btn2"><a href="categories.html?category=qa" title="q&a posts">Q&A</a></div>
+            <div class="category4 btn2"><a href="categories.html?category=other" title="other posts">Other</a></div>
         </section>
         <div class="posts"></div>
         <!-- <button class="displayPosts">See more posts >>></button> -->
-        <a class="displayPosts">See more posts<img src="/images/arrows2.png" alt="arrows for more posts"/></a>
+        <a class="displayPosts"><p>See more posts</p><img src="/images/arrows2.png" alt="arrows for more posts"/></a>
         <div class="postmore"></div>
     </main>
     <footer>
@@ -82,6 +82,6 @@
         <script src="js/getcategories.js"></script>
         <script src="js/post.js"></script>
         <script src="js/message.js"></script>
-        <!-- <script src="js/category.js"></script> -->
+        <script src="js/categories.js"></script>
     </body>
     </html>

@@ -94,7 +94,7 @@ a {
         margin: 0px auto;
         justify-content: center;
         display: flex;
-        min-height: 150px;
+        max-height: 150px;
     }
 
     .blogtext {
@@ -114,4 +114,11 @@ a {
             margin-right: 1%;
     }
 
+  }
+
+  @media (max-width: 400px) {
+
+    .blogimage img {
+        max-height: 100px;
+    }
   }
