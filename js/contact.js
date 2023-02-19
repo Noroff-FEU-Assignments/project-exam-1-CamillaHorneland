@@ -67,3 +67,34 @@ function validateEmail(email) {
     const patternMatches = regEx.test(email);
     return patternMatches;
 }
+
+function submitForm() {
+  const url = "https://camillahorneland.no/slime-care/wp-json/wp/v2/posts";
+  const data = {
+    title: document.querySelector('#subject').value,
+    content: document.querySelector('#message').value,
+    status: 'publish'
+  };
+
+  fetch(url, {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+      'Authorization': 'Bearer ' + 'TuHP cKCq tuPE W1kH kA3I 1m7H'
+    },
+    body: JSON.stringify(data)
+  })
+  .then(response => response.json())
+  .then(data => {
+    console.log('Success:', data);
+  })
+  .catch((error) => {
+    console.error('Error:', error);
+  });
+}
+
+form.addEventListener('submit', function(event) {
+  event.preventDefault();
+  submitForm();
+});
+
