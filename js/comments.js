@@ -18,9 +18,7 @@ fetch(urlComments)
         commentsContainer.appendChild(commentElement);
      });
     }
-
-    renderComments(comments);
-    
+  
     const commentForm = document.querySelector('#comment-form');
     
     commentForm.addEventListener('submit', event => {
@@ -31,7 +29,7 @@ fetch(urlComments)
             author_email: formData.get('author_email'),
             content: formData.get('content')
         };
-        fetch('https://camillahorneland.no/slime-care/wp-json/wp/v2/comments', {
+        fetch("https://camillahorneland.no/slime-care/wp-json/wp/v2/comments", {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
