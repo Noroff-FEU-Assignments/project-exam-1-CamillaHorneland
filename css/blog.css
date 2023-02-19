@@ -36,7 +36,8 @@ h2 {
     min-width: 150px;
 }
 
-.posts {
+.posts,
+#searchResults {
     margin-top: 50px;
     margin-bottom: 50px;
 }
