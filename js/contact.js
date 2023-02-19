@@ -80,7 +80,7 @@ function submitForm() {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',
-      'Authorization': 'Bearer ' + 'TuHP cKCq tuPE W1kH kA3I 1m7H'
+      'Authorization': 'Bearer ' + '^@r*elWU(cxHPC$h*DMH1M%a'
     },
     body: JSON.stringify(data)
   })
