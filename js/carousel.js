@@ -36,7 +36,7 @@ async function getCarusel() {
                 <h4>${namePost}</h4>
                 <p>${textPost}</p>
                 <div class="go_post">
-                    <a href="blogspesific.html?id=${result[i].id}"><p>Read more >>></p></a>
+                    <a href="blogspesific.html?id=${result[i].id}"><p>Read more &#62;&#62;&#62;</p></a>
                 </div> 
             </div>`;
          }

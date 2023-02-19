@@ -55,6 +55,19 @@ h3 {
     justify-content: center;
 }
 
+#searchResults {
+    background-color: rgba(242, 193, 182, .44);
+}
+
+#searchResults p {
+    margin-left: 30px;
+    font-weight: bolder;
+}
+
+/* #closeSearch {
+  margin: 50px;
+} */
+
 .carusel {
   width: 35%;
   height: 100%;

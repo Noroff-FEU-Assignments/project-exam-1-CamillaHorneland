@@ -32,7 +32,7 @@ async function getPosts (url) {
                  <h2 class="blogname">${result[i].title.rendered}</h2>
                  <p>${result[i].excerpt.rendered}</p>
                   <div class="go_post">
-                      <a href="blogspesific.html?id=${result[i].id}"><p>Read more >>></p></a>
+                      <a href="blogspesific.html?id=${result[i].id}"><p>Read more &#62;&#62;&#62;</p></a>
                   </div>
              </div>
          </div>`;

@@ -21,21 +21,33 @@ searchButton.addEventListener("click", () => {
 
           const resultItem = 
           `<div class="blog">
-             <div class="blogcontent>
+             <div class="blogcontent">
                 <div class="blogimage"><img src='${image}'alt='${altText}'/></div>
                 <div class="blogtext">
                    <h2 class="blogname">${postTitle}</h2>
                    <p>${postExcerpt}</p>
-                   <div class="excerpt">${postExcerpt}</div>
                    <div class="go_post">
-                      <a href="blogspesific.html?id=${post.id}"><p>Read more >>></p></a>
+                      <a href="blogspesific.html?id=${post.id}"><p>Read more &#62;&#62;&#62;</p></a>
                    </div>
                </div>
             </div>`;
  
           searchResults.innerHTML += resultItem;
-          searchInput.value ="";
+          console.log("Clearing search input");
+          searchInput.value = "";
         });
+
+        const closeButton = document.createElement("button");
+        closeButton.id = "closeSearch";
+        closeButton.className = "btn";
+        closeButton.textContent = "Close search result";
+        searchResults.appendChild(closeButton);
+        closeButton.addEventListener("click", () => {
+          searchResults.innerHTML = "";
+          closeButton.style.display = "none";
+        });
+        
+        closeButton.style.display = "block";
       }
     })
     .catch(error => {
