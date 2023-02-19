@@ -44,6 +44,39 @@
     margin-bottom: 60px;
 }
 
+#comment-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#comment-form input {
+    width: 350px;
+    height: 30px;
+    background-color: #EBDBD3;
+    border: 1px solid #707070;
+    margin-bottom: 30px;
+}
+
+#comment-form label {
+    font-family: 'Josefin Sans', sans-serif;
+    color: #262521;
+    line-height: 2;
+}
+
+#comment-form textarea {
+   max-width: 600px;
+   min-width: 400px;
+   height: 250px;
+   background-color: #EBDBD3;
+   border: 1px solid #707070;
+}
+
+.btn2 {
+    margin: 50px;
+    background-color: #EBDBD3;
+}
+
 @media (max-width: 800px) {
 
     .imageNormal img {
