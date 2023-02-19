@@ -1,10 +1,14 @@
 const commentsContainer = document.querySelector(".comments");
 
-fetch('https://camillahorneland.no/slime-care/wp-json/wp/v2/comments?post=POST_ID')
+const url = "https://camillahorneland.no/slime-care/wp-json/wp/v2/comments?post=" + id;
+
+
+fetch(url)
   .then(response => response.json())
   .then(comments => {
+    renderComments(comments);
+  })
 
-  });
   function renderComments(comments) {
     comments.forEach(comment => {
         const commentElement = document.createElement('div');
@@ -14,6 +18,7 @@ fetch('https://camillahorneland.no/slime-care/wp-json/wp/v2/comments?post=POST_I
         commentsContainer.appendChild(commentElement);
      });
     }
+    
     renderComments(comments);
     
     const commentForm = document.querySelector('#comment-form');
