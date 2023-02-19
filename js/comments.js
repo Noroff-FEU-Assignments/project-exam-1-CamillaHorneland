@@ -19,7 +19,7 @@ fetch(urlComments)
      });
     }
   
-    const commentForm = document.querySelector('#comment-form');
+    const commentForm = document.getElementById("comment-form");
     
     commentForm.addEventListener('submit', event => {
         event.preventDefault();
