@@ -1,9 +1,9 @@
 const commentsContainer = document.querySelector(".comments");
 
-const url = "https://camillahorneland.no/slime-care/wp-json/wp/v2/comments?post=" + id;
+const urlComments = "https://camillahorneland.no/slime-care/wp-json/wp/v2/comments?post=" + id;
 
 
-fetch(url)
+fetch(urlComments)
   .then(response => response.json())
   .then(comments => {
     renderComments(comments);
@@ -18,7 +18,7 @@ fetch(url)
         commentsContainer.appendChild(commentElement);
      });
     }
-    
+
     renderComments(comments);
     
     const commentForm = document.querySelector('#comment-form');
