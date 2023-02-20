@@ -125,8 +125,8 @@ function submitForm() {
   });
 }
 
-// form.addEventListener('submit', function(event) {
-//   event.preventDefault();
-//   submitForm();
-// });
+form.addEventListener('submit', function(event) {
+  event.preventDefault();
+  submitForm();
+});
 
