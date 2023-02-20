@@ -111,14 +111,13 @@ nav ul {
 }
 
 footer {
-    background-color: rgba(242, 193, 182, .44);
+    background-color: #EBDBD3;
     border-top: 1px solid #707070;
     border-bottom: 1px solid #707070;
     display: flex;
     justify-content: center;
     height: 100%;
     text-align: center;
-    z-index: 2;
 }
 
 .footer_contact,
