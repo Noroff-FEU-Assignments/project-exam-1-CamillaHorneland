@@ -1,48 +1,55 @@
-const commentsContainer = document.querySelector(".comments");
+const commentsContainer = document.getElementById("comment-form");
 
-const urlComments = "https://camillahorneland.no/slime-care/wp-json/wp/v2/comments?post=" + id;
+commentsContainer.addEventListener('submit', async (event) => {
+  event.preventDefault(); 
 
+  const author = document.getElementById('author').value;
+  const email = document.getElementById('email').value;
+  const content = document.getElementById('comment').value;
 
-fetch(urlComments)
-  .then(response => response.json())
-  .then(comments => {
-    renderComments(comments);
-  })
+  const response = await fetch('const urlComments = "https://camillahorneland.no/slime-care/wp-json/wp/v2/comments', {   
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+    },
+    body: JSON.stringify({
+      author_name: author,
+      author_email: email,
+      content: content,
+      post: id,
+    }),
+  });
 
-  function renderComments(comments) {
-    comments.forEach(comment => {
-        const commentElement = document.createElement('div');
-        commentElement.innerHTML = 
-        `<p>${comment.content.rendered}</p>
-        <p>By ${comment.author_name} on ${comment.date}</p>`;
-        commentsContainer.appendChild(commentElement);
-     });
-    }
-  
-    const commentForm = document.getElementById("comment-form");
+  const result = await response.json();
+
+  console.log(result);
+});
+
+const showComments = document.querySelector(".allComments");
+const commentsUrl = "https://camillahorneland.no/slime-care/wp-json/wp/v2/comments?post=" + id;
+
+const fetchComments = async () => {
+  try {
+    const response = await fetch(commentsUrl);
+    const comments = await response.json();
+    console.log(comments);
     
-    commentForm.addEventListener('submit', event => {
-        event.preventDefault();
-        const formData = new FormData(commentForm);
-        const postData = {
-            author_name: formData.get('author_name'),
-            author_email: formData.get('author_email'),
-            content: formData.get('content')
-        };
-        fetch("https://camillahorneland.no/slime-care/wp-json/wp/v2/comments", {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json'
-            },
-            body: JSON.stringify(postData)
-        })
-        .then(response => response.json())
-        .then(comment => {
-            const commentElement = document.createElement('div');
-            commentElement.innerHTML = 
-            `<p>${comment.content.rendered}</p>
-             <p>By ${comment.author_name} on ${comment.date}</p>`;
-             commentsContainer.appendChild(commentElement);
-             commentForm.reset();
-            });
-        });
+    showComments.innerHTML = "";
+    
+    comments.forEach(comment => {
+      const showComments = `
+        <div class="comment">
+          <p class="comment-author">${comment.author_name}</p>
+          <p class="comment-date">${comment.date}</p>
+          <p class="comment-content">${comment.content.rendered}</p>
+        </div>
+      `;
+      showComments.innerHTML += commentHtml;
+    });
+  } catch (error) {
+    console.log(error);
+  }
+};
+
+fetchComments();
+
