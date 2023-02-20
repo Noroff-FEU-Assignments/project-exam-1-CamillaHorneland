@@ -20,8 +20,7 @@ function validateForm(event) {
         yourNameError.style.display = "none";
     } else {
         hasErrors = true;
-
-        emailError.style.display = "block";
+        yourNameError.style.display = "block";
     }
 
     if (validateEmail(email.value) === true) {
@@ -42,6 +41,8 @@ function validateForm(event) {
         messageError.style.display = "none";
     } else {
         hasErrors = true;
+        messageError.style.display = "block"; 
+    }
 
        if(!hasErrors) {
        messageYou.innerHTML = '<div class="messageYou"><h1>Your message has been sent..</h1><img src="/images/heart.png"><a href="index.html">Home</a></div>';
@@ -66,6 +67,6 @@ function validateEmail(email) {
     const patternMatches = regEx.test(email);
     return patternMatches;
 }
-};
+
 
 
