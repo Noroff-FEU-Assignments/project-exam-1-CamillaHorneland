@@ -70,9 +70,7 @@ let curSlide = 0;
         }
         carouselContainer.style.left = "-"+(curSlide*100)+"%";
         });
-// slides.forEach((slide, indx) => {
-//   slide.style.transform = `translateX(${indx * 100}%)`;
-// });
+
  
 
  

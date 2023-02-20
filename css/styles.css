@@ -118,6 +118,7 @@ footer {
     justify-content: center;
     height: 100%;
     text-align: center;
+    z-index: 2;
 }
 
 .footer_contact,
