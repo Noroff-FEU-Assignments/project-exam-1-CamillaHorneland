@@ -86,7 +86,7 @@ function submitForm() {
     content: document.querySelector('#message').value,
     status: 'draft',
        meta: {
-      'name': document.querySelector('#yourName').value,
+      'yourName': document.querySelector('#yourName').value,
       'email': document.querySelector('#email').value
     }
   };
