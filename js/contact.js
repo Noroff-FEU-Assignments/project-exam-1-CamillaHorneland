@@ -15,56 +15,41 @@ function validateForm(event) {
 
     var hasErrors = false;
 
-    if (yourName.value.trim().length < 5) {
-  hasErrors = true;
-  yourNameError.style.display = "block";
-} else if (!validateEmail(email.value)) {
-  hasErrors = true;
-  emailError.style.display = "block";
-} else if (subject.value.trim().length < 15) {
-  hasErrors = true;
-  subjectError.style.display = "block";
-} else if (message.value.trim().length < 25) {
-  hasErrors = true;
-  messageError.style.display = "block";
-}
+    if(checkLength(yourName.value, 5)===true) {
+        yourNameError.style.display = "none";
+    } else {
+        hasErrors = true;
+        yourNameError.style.display = "block";
+    }
 
+    if (validateEmail(email.value) === true) {
+        emailError.style.display = "none";
+    } else {
+        hasErrors = true;
+        emailError.style.display = "block";
+    }
 
-    // if(checkLength(yourName.value, 5)===true) {
-    //     yourNameError.style.display = "none";
-    // } else {
-    //     hasErrors = true;
-    //     yourNameError.style.display = "block";
-    // }
+     if (checkLength(subject.value, 15) === true) {
+        subjectError.style.display = "none";
+    } else {
+        hasErrors = true;
+        subjectError.style.display = "block";
+    }
 
-    // if (validateEmail(email.value) === true) {
-    //     emailError.style.display = "none";
-    // } else {
-    //     hasErrors = true;
-    //     emailError.style.display = "block";
-    // }
+      if (checkLength(message.value, 25) === true) {
+        messageError.style.display = "none";
+    } else {
+        hasErrors = true;
+        messageError.style.display = "block";
+    }
 
-    //  if (checkLength(subject.value, 15) === true) {
-    //     subjectError.style.display = "none";
-    // } else {
-    //     hasErrors = true;
-    //     subjectError.style.display = "block";
-    // }
-
-    //   if (checkLength(message.value, 25) === true) {
-    //     messageError.style.display = "none";
-    // } else {
-    //     hasErrors = true;
-    //     messageError.style.display = "block";
-    // }
-
-    //    if(!hasErrors) {
-    // //    messageYou.innerHTML = '<div class="messageYou"><h1>Your message has been sent..</h1><img src="/images/heart.png"><a href="index.html">Home</a></div>';
-    //    form.reset();
-    // }
-    //   if (!hasErrors) {
-    //     submitForm();
-    //  }
+       if(!hasErrors) {
+    //    messageYou.innerHTML = '<div class="messageYou"><h1>Your message has been sent..</h1><img src="/images/heart.png"><a href="index.html">Home</a></div>';
+       form.reset();
+    }
+      if (!hasErrors) {
+        submitForm();
+     }
 
   console.log("hello");
 }
