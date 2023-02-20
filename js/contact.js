@@ -11,7 +11,6 @@ const messageYou = document.querySelector("#messageYou");
 const button = document.querySelector("btn");
 
 function validateForm(event) {
-
     event.preventDefault();
 
     var hasErrors = false;
@@ -44,15 +43,18 @@ function validateForm(event) {
         messageError.style.display = "block";
     }
 
-       if(!hasErrors) {
-       messageYou.innerHTML = '<div class="messageYou"><h1>Your message has been sent..</h1><img src="/images/heart.png"><a href="index.html">Home</a></div>';
-       form.reset();
-    }
+    //    if(!hasErrors) {
+    // //    messageYou.innerHTML = '<div class="messageYou"><h1>Your message has been sent..</h1><img src="/images/heart.png"><a href="index.html">Home</a></div>';
+    //    form.reset();
+    // }
+      if (!hasErrors) {
+        submitForm();
+     }
 
   console.log("hello");
 }
 
-form.addEventListener("submit", validateForm);
+// form.addEventListener("submit", validateForm);
 
 function checkLength(value, len) {
     if (value.trim().length > len) {
@@ -73,28 +75,27 @@ function submitForm() {
   const data = {
     title: document.querySelector('#subject').value,
     content: document.querySelector('#message').value,
-    status: 'publish'
+    // status: 'publish'
+    const formData = new FormData(form;)
   };
 
   fetch(url, {
     method: 'POST',
-    headers: {
-      'Content-Type': 'application/json',
-      'Authorization': 'Bearer ' + '^@r*elWU(cxHPC$h*DMH1M%a'
-    },
-    body: JSON.stringify(data)
+    body: formData,
   })
   .then(response => response.json())
   .then(data => {
     console.log('Success:', data);
-  })
+    messageYou.innerHTML = '<div class="messageYou"><h1>Your message has been sent..</h1><img src="/images/heart.png"><a href="index.html">Home</a></div>';
+    form.reset();
+})
   .catch((error) => {
     console.error('Error:', error);
   });
 }
 
-form.addEventListener('submit', function(event) {
-  event.preventDefault();
-  submitForm();
-});
+// form.addEventListener('submit', function(event) {
+//   event.preventDefault();
+//   submitForm();
+// });
 
