@@ -1,6 +1,8 @@
 const searchInput = document.getElementById("searchInput");
 const searchButton = document.getElementById("searchbtn");
 const searchResults = document.getElementById("searchResults");
+const menuButton = document.querySelector(".close");
+const menu = document.getElementById("#hamburger-menu");
 
 searchButton.addEventListener("click", () => {
   const searchTerm = searchInput.value.trim().toLowerCase();
@@ -47,7 +49,12 @@ searchButton.addEventListener("click", () => {
           closeButton.style.display = "none";
         });
         
-        closeButton.style.display = "block";
+      if (window.matchMedia("(max-width: 800px)").matches) {
+          const hamburgerMenu = document.getElementById("hamburger-menu");
+          if (hamburgerMenu.checked) {
+            hamburgerMenu.checked = false;
+          }
+        }
       }
     })
     .catch(error => {

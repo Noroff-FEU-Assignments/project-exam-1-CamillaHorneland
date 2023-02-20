@@ -102,6 +102,10 @@ a {
         margin-left: 30px;
         margin-right: 30px;
     }
+
+    .go_post {
+        text-align: center;
+    }
  }
 
  @media (max-width: 650px) {
@@ -120,6 +124,7 @@ a {
   @media (max-width: 400px) {
 
     .blogimage img {
-        max-height: 100px;
+       
+        max-width: 300px;
     }
   }

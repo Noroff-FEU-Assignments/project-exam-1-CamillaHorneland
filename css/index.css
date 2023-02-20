@@ -33,6 +33,10 @@ h1 {
     flex-direction: row;
 }
 
+#searchInput {
+    width: 200px;
+}
+
 .welcomeContainer,
 .welcome_image {
     margin-left: 60px;
@@ -59,14 +63,15 @@ h3 {
     background-color: rgba(242, 193, 182, .44);
 }
 
+#closeSearch {
+    display: flex;
+    position: relative;
+}
+
 #searchResults p {
     margin-left: 30px;
     font-weight: bolder;
 }
-
-/* #closeSearch {
-  margin: 50px;
-} */
 
 .carusel {
   width: 35%;
@@ -88,7 +93,7 @@ h3 {
 
 #blog_post_carousel {
     position: relative;
-    min-height: 620px;
+    min-height: 660px;
     overflow: hidden;
     width: 100vw;
 }
@@ -178,21 +183,20 @@ footer {
     }
 
     .search {
-            display: flex;
-            flex-direction: column;
-            gap: 15px;
-            position: relative;
-            margin-top: 200px;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            align-items: center;
-            
+        display: flex;
+        flex-direction: column;
+        gap: 25px;
+        position: relative;
+        margin-top: 200px;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        align-items: center;       
     }
 
      #blog_post_carousel {
             position: relative;
-            min-height: 700px;
+            min-height: 800px;
     }
 }
 
@@ -210,6 +214,20 @@ footer {
     }
 
     #blog_post_carousel {
-      min-height: 1280px;
+      min-height: 1350px;
+    }
+}
+
+@media (max-width: 450px) {
+
+    #blog_post_carousel {
+        min-height: 1450px;
+    }
+}
+
+@media (max-width: 380px) {
+
+    #blog_post_carousel {
+        min-height: 1550px;
     }
 }

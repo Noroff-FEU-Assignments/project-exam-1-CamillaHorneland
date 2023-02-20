@@ -92,11 +92,6 @@
      .text img {
         display: none;
      }
-
-     .post li {
-        line-height: 0;
-        display: inline-block;
-     }
 }
 
 @media (max-width: 500px) {
