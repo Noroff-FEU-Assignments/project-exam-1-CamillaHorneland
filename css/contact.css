@@ -16,11 +16,9 @@ h1 {
     flex: 1;
 }
 
-
-
 .contact_image img {
-    max-width: 80%;
-    min-width: 50%;
+    max-width: 70%;
+    min-width: 40%;
 }
 
 .form_flex {
@@ -65,7 +63,6 @@ textarea {
     margin-bottom: 5px;
     padding: 10px;
     min-width: 250px;
-    max-width: 250px;
 }
 
 textarea {
