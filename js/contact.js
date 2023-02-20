@@ -80,11 +80,15 @@ function validateEmail(email) {
 //   };
 
 function submitForm() {
-  const url = "https://camillahorneland.no/slime-care/wp-json/wp/v2/posts";
+  const url = "https://camillahorneland.no/slime-care/wp-json/wp/v2/contacts";
     const data = {
     title: document.querySelector('#subject').value,
     content: document.querySelector('#message').value,
-    status: 'publish'
+    status: 'draft',
+       meta: {
+      'name': document.querySelector('#yourName').value,
+      'email': document.querySelector('#email').value
+    }
   };
 
   fetch(url, {
