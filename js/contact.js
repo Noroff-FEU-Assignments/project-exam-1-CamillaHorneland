@@ -70,18 +70,30 @@ function validateEmail(email) {
     return patternMatches;
 }
 
+// function submitForm() {
+//   const url = "https://camillahorneland.no/slime-care/wp-json/wp/v2/posts";
+//   const data = {
+//     title: document.querySelector('#subject').value,
+//     content: document.querySelector('#message').value,
+//     // status: 'publish'
+//     const formData = new FormData(form)
+//   };
+
 function submitForm() {
   const url = "https://camillahorneland.no/slime-care/wp-json/wp/v2/posts";
-  const data = {
+    const data = {
     title: document.querySelector('#subject').value,
     content: document.querySelector('#message').value,
-    // status: 'publish'
-    const formData = new FormData(form;)
+    status: 'publish'
   };
 
   fetch(url, {
     method: 'POST',
-    body: formData,
+      headers: {
+      'Content-Type': 'application/json',
+      'Authorization': 'Basic ' + btoa('togetForm' + ':' + '^@r*elWU(cxHPC$h*DMH1M%a')
+    },
+    body: JSON.stringify(data)
   })
   .then(response => response.json())
   .then(data => {
