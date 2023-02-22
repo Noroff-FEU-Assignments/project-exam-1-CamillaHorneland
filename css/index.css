@@ -69,8 +69,22 @@ h3 {
     font-weight: bolder;
 }
 
+.blogContent {
+    display: flex;
+}
+
+.blogimage img {
+    max-width: 300px;
+    margin-left: 30px;
+}
+
+.blog p {
+    color: #707070;
+}
+
 h3 {
     text-align: center;
+    margin-left: 0;
 }
 
 .carusel {
@@ -122,7 +136,6 @@ h3 {
 }
 
 .carusel p {
-    font-weight: lighter;
     color: #707070;
     margin: 15px;
 }

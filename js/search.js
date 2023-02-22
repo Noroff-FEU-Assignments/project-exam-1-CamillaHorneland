@@ -24,14 +24,12 @@ searchButton.addEventListener("click", () => {
           const resultItem = 
           `<div class="blog">
              <div class="blogcontent">
-                <div class="blogimage"><img src='${image}'alt='${altText}'/></div>
-                <div class="blogtext">
-                   <h2 class="blogname">${postTitle}</h2>
-                   <p>${postExcerpt}</p>
-                   <div class="go_post">
-                      <a href="blogspesific.html?id=${post.id}"><p>Read more &#62;&#62;&#62;</p></a>
-                   </div>
-               </div>
+                <h2 class="blogname">${postTitle}</h2>
+                <div class="blogimage"><img src='${image}'alt='${altText}'></div>
+                <p>${postExcerpt}</p>
+                <div class="go_post">
+                      <a href="blogspesific.html?id=${post.id}"><p>Read more &#62;&#62;&#62;</p><a>
+              </div>
             </div>`;
  
           searchResults.innerHTML += resultItem;
