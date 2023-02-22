@@ -44,7 +44,7 @@ async function getPostsCategories () {
          containerCategories.innerHTML +=
          `<div class="blog">
              <div class="blogcontent">
-                 <div class="blogimage"><img src='${filteredPosts[i]["_embedded"]["wp:featuredmedia"][0]["source_url"]}'alt='${filteredPosts[i]["_embedded"]["wp:featuredmedia"][0]["alt_text"]}'/></div>
+                 <div class="blogimage"><img src='${filteredPosts[i]["_embedded"]["wp:featuredmedia"][0]["source_url"]}'alt='${filteredPosts[i]["_embedded"]["wp:featuredmedia"][0]["alt_text"]}'></div>
                  <div class="blogtext">
                  <h2 class="blogname">${filteredPosts[i].title.rendered}</h2>
                  <p>${filteredPosts[i].excerpt.rendered}</p>

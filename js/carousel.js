@@ -31,13 +31,16 @@ async function getCarusel() {
             }
             
             var carouselHolder = carouselContainer.lastChild;
-            carouselHolder.innerHTML += `<div class="carusel">
-                <div class="image"><img src='${imagePost}'alt='${result[i]["_embedded"]["wp:featuredmedia"][0]["alt_text"]}'/></div>
-                <h4>${namePost}</h4>
-                <p>${textPost}</p>
-                <div class="go_post">
-                    <a href="blogspesific.html?id=${result[i].id}"><p>Read more &#62;&#62;&#62;</p></a>
-                </div> 
+            carouselHolder.innerHTML += 
+            `<div class="carusel">
+                <a href="blogspesific.html?id=${result[i].id}">
+                  <div class="image"><img src='${imagePost}'alt='${result[i]["_embedded"]["wp:featuredmedia"][0]["alt_text"]}'></div>
+                  <div class="namePost"><h4>${namePost}</h4></div>
+                  <p>${textPost}</p>
+                  <div class="go_post">
+                    <p>Read more &#62;&#62;&#62;</p>
+                  </div>
+                </a>
             </div>`;
          }
          

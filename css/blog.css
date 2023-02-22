@@ -6,6 +6,7 @@ h2 {
     font-size: 30px;
     padding: 0;
     margin-top: 30px;
+    text-align: left;
 }
 
 .blog_header {
@@ -36,8 +37,7 @@ h2 {
     min-width: 150px;
 }
 
-.posts,
-#searchResults {
+.posts {
     margin-top: 50px;
     margin-bottom: 50px;
 }
@@ -57,13 +57,17 @@ h2 {
 
 
 .blogimage {
-    margin-left: 100px;
+    margin-left: 70px;
     margin-top: 30px;  
+    flex: 1;
+    width: 50%;
 }
 
 
 .blogtext {
-    margin-right: 100px;   
+    margin-right: 70px; 
+    flex: 1; 
+    width: 50%; 
 }
 
 a {
