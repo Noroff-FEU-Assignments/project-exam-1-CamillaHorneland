@@ -163,7 +163,6 @@ h3 {
 .go_post p {
     display: flex;
     justify-self: end;
-    /* margin-bottom: 0%; */
 }
 
 .caruselChange:hover,
@@ -219,6 +218,10 @@ footer {
         left: 52%;
         transform: translate(-50%, -50%);
         align-items: center;  
+    }
+
+    #searchInput {
+        height: 30px;
     }
 
      #blog_post_carousel {
