@@ -44,8 +44,9 @@ async function getCarusel() {
             </div>`;
          }
          
-    } catch(error) {
+     }catch(error) {
         console.log(error);
+        carouselContainer.innerHTML = message("error", error);
     }
 }
 

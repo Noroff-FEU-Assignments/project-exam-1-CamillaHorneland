@@ -37,11 +37,11 @@ async function getPosts (url) {
              </div>
          </div>`;
       }
-
-    }catch (error) {
-console.log(error);
- }
-
+    
+    }catch(error) {
+        console.log(error);
+        postsContainer.innerHTML = message("error", error);
+    }
 }
 
 getPosts(urlFirst)

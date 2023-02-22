@@ -18,7 +18,7 @@ async function getAbout() {
 
 }catch (error) {
 console.log(error);
-welcomeContainer.innerHTML = message("error", error);
+aboutContainer.innerHTML = message("error", error);
  }
 
 }

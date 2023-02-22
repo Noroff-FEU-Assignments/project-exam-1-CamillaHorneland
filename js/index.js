@@ -14,13 +14,11 @@ async function getWelcome() {
              
         welcomeContainer.innerHTML +=
          `<p>${result.content.rendered}</p>`;
- } ;
-
-}catch (error) {
-console.log(error);
-welcomeContainer.innerHTML = message("error", error);
- }
-
+        };
+    }catch (error) {
+        console.log(error);
+        welcomeContainer.innerHTML = message("error", error);
+    }
 }
 
 getWelcome();

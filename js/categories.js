@@ -54,10 +54,11 @@ async function getPostsCategories () {
              </div>
          </div>`;
       }
-
-    }catch (error) {
-  console.log(error);
- }
+    
+    }catch(error) {
+        console.log(error);
+        containerCategories.innerHTML = message("error", error);
+    }
 
 }
 

@@ -35,12 +35,9 @@ async function getRightCategories() {
 
             });
         });
- 
     }catch (error) {
-console.log(error);
- }
-
+        console.log(error);
+    }
 }
-
 getRightCategories();
 
