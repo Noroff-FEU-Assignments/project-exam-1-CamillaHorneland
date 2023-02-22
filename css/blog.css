@@ -7,6 +7,7 @@ h2 {
     padding: 0;
     margin-top: 30px;
     text-align: left;
+    line-height: 1.5;
 }
 
 .blog_header {
@@ -125,17 +126,22 @@ a {
  @media (max-width: 650px) {
 
     h1 {
-          font-size: 40px;
+        font-size: 40px;
+        text-align: center;
+    }
+
+    h2 {
+        font-size: 25px;
     }
 
     .categorys {
-            margin-left: 1%;
-            margin-right: 1%;
+        margin-left: 1%;
+        margin-right: 1%;
     }
 
   }
 
-  @media (max-width: 500px) {
+  @media (max-width: 572px) {
 
     h1 {
         font-size: 30px;
@@ -143,10 +149,9 @@ a {
   }
 
 
-  @media (max-width: 400px) {
+  @media (max-width: 500px) {
 
     .blogimage img {
-       
         max-width: 300px;
     }
   }
