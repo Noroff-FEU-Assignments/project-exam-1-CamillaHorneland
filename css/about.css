@@ -28,6 +28,8 @@ main {
 }
 
 .about_info {
+    display: flex;
+    flex-direction: column;
     flex: 2;
 }
 
