@@ -19,6 +19,7 @@ a {
     color: #262521;
     line-height: 2; 
     text-decoration: none;
+    font-size: 17px;
 }
 
 body {
@@ -183,6 +184,10 @@ footer {
 }
 
 @media (max-width: 800px) {
+
+    p {
+        font-size: 16px;
+    }
 
     .deteskop,
     #hamburger-menu {
