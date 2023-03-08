@@ -39,8 +39,8 @@ You have been tasked with creating a blog site. You can choose the design and to
 
 ## Level 1 Process
 
-1.	Decide on the theme for the blog you’re going to make
-2.	Create a prototype of the website
+   1.	Decide on the theme for the blog you’re going to make
+   2.	Create a prototype of the website
 3.	Install WordPress on your web host and add the blogs on the admin panel. 
 4.	Use the GitHub repo created by GitHub Classroom for your files and deploy to Netlify
 5.	Build your website using HTML, CSS and JavaScript making a call to the WordPress REST API to fetch your data.
