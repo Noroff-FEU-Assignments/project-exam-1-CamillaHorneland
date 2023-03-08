@@ -1,10 +1,11 @@
-## Project Exam 1
+# Project Exam 1 - Camilla Horneland
 
-## Goal
+![slime-care](https://user-images.githubusercontent.com/104870685/223856774-2900453a-3f00-4dd9-b162-193742b115e8.jpeg)
 
-To put into practice the skills learned over your first year of studies.
+This is my exam from my first year as a Font-end Developer student. The goal for this exam was to put into practice the skilles I have learned over my first year as a student.
 
-## Brief
+
+# Brief:
 You have been tasked with creating a blog site. You can choose the design and topics covered on the blog, but it should have at least the following pages:
 -	Home page
 -	About page
@@ -64,4 +65,6 @@ Note that this is an exam, and therefore tutor support will be limited as per th
 1.	You can try adding a sort, filter, or search to the blog posts page allowing users to find the blog post more easily that they’re looking for. 
 2.	Post the data from the contact form to WordPress so you have the details saved.
 3.	Allow users to submit comments on a blog post, and post this data to WordPress
+
+
 
