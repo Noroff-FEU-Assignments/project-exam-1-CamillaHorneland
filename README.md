@@ -11,7 +11,7 @@ You have been tasked with creating a blog site. You can choose the design and to
 -	About page
 -	List of blog posts
 -	Blog post specific pages
--	Contact page.
+-	Contact page
 
 ## Requirements:
 
