@@ -53,7 +53,38 @@ You have been tasked with creating a blog site. You can choose the design and to
 
 1.	You can try adding a sort, filter, or search to the blog posts page allowing users to find the blog post more easily that they’re looking for. 
 2.	Post the data from the contact form to WordPress so you have the details saved.
-3.	Allow users to submit comments on a blog post, and post this data to WordPress
+3.	Allow users to submit comments on a blog post, and post this data to WordPress.
+
+# Details: 
+
+This was a 5 week project. I decided to make a blog about using snail slime as a part of the skin care rutine. I completed all requirements and 1 of the optional (sort and search). 
+
+
+# Built With:
+
+    - Adobe XD
+    - HTML
+    - CSS
+    - JavaScript
+    - Wordpress Headless CMS (REST API)
+    
+ # Instructions:
+
+    - Fork this repository
+    - Clone the forked repository
+    - Add your contributions (code or documentation)
+    - Commit and push
+    - Wait for pull request to be merged
+
+# Contact
+
+<a href="mailto:hornikkene@gmail.com?">My Mail</a> 
+
+<a href="https://portfoliocamillahorneland.netlify.app/">My Portfolio</a>
+
+<a href="https://www.linkedin.com/in/camilla-horneland-706bb5239/">My LinkedIn page</a>
+
+
 
 
 
