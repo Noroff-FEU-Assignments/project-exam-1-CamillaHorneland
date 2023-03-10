@@ -68,14 +68,24 @@ This was a 5 week project. I decided to make a blog about using snail slime as a
     - JavaScript
     - Wordpress Headless CMS (REST API)
     
- # Instructions:
+ # Getting Started
 
-    - Fork this repository
-    - Clone the forked repository
-    - Add your contributions (code or documentation)
-    - Commit and push
-    - Wait for pull request to be merged
+## Installing
 
+1.Clone the repo:
+
+    git clone https://github.com/Noroff-FEU-Assignments/project-exam-1-CamillaHorneland.git
+
+2. Install the dependencies:
+
+       npm install
+
+## Running
+
+To run the app, run the following commands:
+
+      npm run start
+      
 # Contact
 
 <a href="mailto:hornikkene@gmail.com?">My Mail</a> 
